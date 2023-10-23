@@ -4,12 +4,12 @@ Hello World
 
 <script>
   // Fetch content from the server
-  fetch('/portfolio/show')
+  fetch('/portfolio/show.html.erb')
     .then(response => response.text())
     .then(content => {
       // Insert content into the 'dynamic-content' div
       document.getElementById('dynamic-content').innerHTML = content;
     })
     .catch(error => console.error(error));
-    
+
 </script>

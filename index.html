@@ -1,0 +1,15 @@
+Hello World
+<!-- index.html -->
+<div id="dynamic-content"></div>
+
+<script>
+  // Fetch content from the server
+  fetch('/portfolios/show.html.erb')
+    .then(response => response.text())
+    .then(content => {
+      // Insert content into the 'dynamic-content' div
+      document.getElementById('dynamic-content').innerHTML = content;
+    })
+    .catch(error => console.error(error));
+
+</script>
